@@ -1,4 +1,4 @@
-# Compte rendu TP 3 et 4 : Nginx dans un chroot (fat puis thin)
+# Compte rendu TP 3 : Nginx dans un chroot (fat puis thin)
 
 Le but de ces deux TP est de faire tourner le Nginx qu'on a compilé nous-mêmes (version 1.30.6, installé dans `/opt/nginx-1.30.6`) dans un chroot. Un chroot, c'est un dossier que le processus voit comme sa racine `/` : il ne peut plus accéder au reste du système. Si Nginx se fait attaquer, l'attaquant reste coincé dedans. La séance 3 porte sur un chroot « fat », avec un système Debian complet. La séance 4 porte sur un chroot « thin », avec seulement ce dont Nginx a besoin.
 
