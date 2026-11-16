@@ -2,7 +2,7 @@
 
 Le but de ces deux TP est de faire tourner le Nginx qu'on a compilé nous-mêmes (version 1.30.6, installé dans `/opt/nginx-1.30.6`) dans un chroot. Un chroot, c'est un dossier que le processus voit comme sa racine `/` : il ne peut plus accéder au reste du système. Si Nginx se fait attaquer, l'attaquant reste coincé dedans. La séance 3 porte sur un chroot « fat », avec un système Debian complet. La séance 4 porte sur un chroot « thin », avec seulement ce dont Nginx a besoin.
 
-## 1. Fat Nginx chroot (séance 3)
+## 1. Fat Nginx chroot
 
 ### 1.1 Création du dossier
 
@@ -146,7 +146,7 @@ useradd -r -d /var/empty -s /bin/false -u 3000 -g 3000 nginx
 
 `-r` crée un compte système, `-d /var/empty` donne un home vide, `-s /bin/false` interdit d'ouvrir un shell avec ce compte, et `-u 3000 -g 3000` fixe l'UID et le GID.
 
-## 2. Thin Nginx chroot (séance 4)
+## 2. Thin Nginx chroot 
 
 Le chroot fat marche mais il est lourd. Ici on construit un chroot qui ne contient que Nginx et ce qu'il lui faut pour tourner.
 
